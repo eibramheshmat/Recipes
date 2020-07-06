@@ -1,1 +1,2 @@
 # Recipes
+showing list of recipes about project architecture: is MVVM with CallBack closures. app business logic: when you enter the app you face our search bar by enter your recpice we will search for all availables about your word and get all data in list and you can see details of the recipe om details page also you can go on safari to show the soruce of our recipe. features: searching about recipes, details about any recipe and source deep link to reach recipe source. unittest: there is some method to test app with XCTest. thankyoU ^_^!
