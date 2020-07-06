@@ -16,6 +16,14 @@
 		0470B3A624B3336500504A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0470B3A424B3336500504A8B /* LaunchScreen.storyboard */; };
 		0470B3B124B3336500504A8B /* RecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3B024B3336500504A8B /* RecipesTests.swift */; };
 		0470B3C224B3351100504A8B /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3C124B3351100504A8B /* RecipeModel.swift */; };
+		0470B3C424B3396B00504A8B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3C324B3396B00504A8B /* Constants.swift */; };
+		0470B3C624B33A4C00504A8B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3C524B33A4C00504A8B /* Network.swift */; };
+		0470B3C924B33B0600504A8B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3C824B33B0600504A8B /* Extensions.swift */; };
+		0470B3CB24B33B0F00504A8B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3CA24B33B0F00504A8B /* LoadingView.swift */; };
+		0470B3CD24B33B9F00504A8B /* APIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3CC24B33B9F00504A8B /* APIServices.swift */; };
+		0470B3CF24B33FFA00504A8B /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3CE24B33FFA00504A8B /* TaskViewModel.swift */; };
+		0470B3D324B3468000504A8B /* RecipcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470B3D124B3468000504A8B /* RecipcesTableViewCell.swift */; };
+		0470B3D424B3468000504A8B /* RecipcesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0470B3D224B3468000504A8B /* RecipcesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,14 @@
 		0470B3B024B3336500504A8B /* RecipesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTests.swift; sourceTree = "<group>"; };
 		0470B3B224B3336500504A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0470B3C124B3351100504A8B /* RecipeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		0470B3C324B3396B00504A8B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0470B3C524B33A4C00504A8B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		0470B3C824B33B0600504A8B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0470B3CA24B33B0F00504A8B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0470B3CC24B33B9F00504A8B /* APIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServices.swift; sourceTree = "<group>"; };
+		0470B3CE24B33FFA00504A8B /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		0470B3D124B3468000504A8B /* RecipcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipcesTableViewCell.swift; sourceTree = "<group>"; };
+		0470B3D224B3468000504A8B /* RecipcesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipcesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +99,13 @@
 		0470B39524B3336300504A8B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				0470B3BD24B3347B00504A8B /* Presenter */,
+				0470B3C724B33AE000504A8B /* Helper */,
+				0470B3D024B340F800504A8B /* Controllers */,
+				0470B3BD24B3347B00504A8B /* ViewModel */,
 				0470B3BC24B3347100504A8B /* View */,
 				0470B3BB24B3345A00504A8B /* Model */,
 				0470B39624B3336300504A8B /* AppDelegate.swift */,
 				0470B39824B3336300504A8B /* SceneDelegate.swift */,
-				0470B39A24B3336300504A8B /* ViewController.swift */,
 				0470B39C24B3336300504A8B /* Main.storyboard */,
 				0470B3A224B3336500504A8B /* Assets.xcassets */,
 				0470B3A424B3336500504A8B /* LaunchScreen.storyboard */,
@@ -120,15 +137,18 @@
 		0470B3BC24B3347100504A8B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0470B3D124B3468000504A8B /* RecipcesTableViewCell.swift */,
+				0470B3D224B3468000504A8B /* RecipcesTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		0470B3BD24B3347B00504A8B /* Presenter */ = {
+		0470B3BD24B3347B00504A8B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0470B3CE24B33FFA00504A8B /* TaskViewModel.swift */,
 			);
-			path = Presenter;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0470B3BE24B334A300504A8B /* Model */ = {
@@ -142,6 +162,7 @@
 		0470B3BF24B334AD00504A8B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				0470B3C324B3396B00504A8B /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -149,8 +170,27 @@
 		0470B3C024B334F700504A8B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				0470B3C524B33A4C00504A8B /* Network.swift */,
+				0470B3CC24B33B9F00504A8B /* APIServices.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0470B3C724B33AE000504A8B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0470B3C824B33B0600504A8B /* Extensions.swift */,
+				0470B3CA24B33B0F00504A8B /* LoadingView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0470B3D024B340F800504A8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0470B39A24B3336300504A8B /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +277,7 @@
 				0470B3A624B3336500504A8B /* LaunchScreen.storyboard in Resources */,
 				0470B3A324B3336500504A8B /* Assets.xcassets in Resources */,
 				0470B39E24B3336300504A8B /* Main.storyboard in Resources */,
+				0470B3D424B3468000504A8B /* RecipcesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,11 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0470B3CF24B33FFA00504A8B /* TaskViewModel.swift in Sources */,
 				0470B39B24B3336300504A8B /* ViewController.swift in Sources */,
 				0470B39724B3336300504A8B /* AppDelegate.swift in Sources */,
 				0470B3C224B3351100504A8B /* RecipeModel.swift in Sources */,
+				0470B3C924B33B0600504A8B /* Extensions.swift in Sources */,
+				0470B3CD24B33B9F00504A8B /* APIServices.swift in Sources */,
 				0470B39924B3336300504A8B /* SceneDelegate.swift in Sources */,
+				0470B3D324B3468000504A8B /* RecipcesTableViewCell.swift in Sources */,
 				0470B3A124B3336300504A8B /* Recipes.xcdatamodeld in Sources */,
+				0470B3C624B33A4C00504A8B /* Network.swift in Sources */,
+				0470B3C424B3396B00504A8B /* Constants.swift in Sources */,
+				0470B3CB24B33B0F00504A8B /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8HXJ9GUR4;
 				INFOPLIST_FILE = Recipes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W8HXJ9GUR4;
 				INFOPLIST_FILE = Recipes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
