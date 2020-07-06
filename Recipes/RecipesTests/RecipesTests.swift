@@ -30,5 +30,18 @@ class RecipesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testAPIRequestSuccessful() {
+        let expectatin = XCTestExpectation(description: "Request recipes list from DB")
+        let url = URL(string: "\(Constants.baseUrl)?app_id=\(Constants.app_id)&app_key=\(Constants.app_key)&q=rice&from=0&to=10")
+        let task = URLSession.shared.dataTask(with: url!){(_, response, _) in
+            if let responseHTTP = response as? HTTPURLResponse{
+                XCTAssertEqual(responseHTTP.statusCode, 200)
+                expectatin.fulfill()
+            }
+        }
+        task.resume()
+        wait(for: [expectatin], timeout: 10.0)/// to wait while response back
+    }
 
 }

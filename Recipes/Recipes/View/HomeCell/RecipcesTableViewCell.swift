@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipcesTableViewCell: UITableViewCell {
 
@@ -36,6 +37,7 @@ class RecipcesTableViewCell: UITableViewCell {
     }
     
     func setupData(){
+        self.recipeImage.kf.setImage(with: URL(string: dataObject?.image ?? ""))
         self.recipeTitle.text = dataObject?.label
         self.recipeSource.text = dataObject?.source
         fillHealthLBL()
