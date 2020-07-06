@@ -10,9 +10,9 @@ import Foundation
 
 class TaskViewModel{
     
-    func getData(RecipeSearchWord: String, from: Int, to: Int){
+    func getData(RecipeSearchWord: String, from: Int, to: Int, compation: @escaping (RecipeModel)->()){
         APIServices.shared.getRecipe(RecipeSearchWord: RecipeSearchWord, from: from, to: to) { (result) in
-            print(result)
+            compation(result)
         }
     }
 }
